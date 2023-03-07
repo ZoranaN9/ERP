@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class SalesPage {
 
     public SalesPage() {
@@ -24,6 +26,6 @@ public class SalesPage {
     public WebElement sales_link;
 
     @FindBy(xpath = "//th[@class='o_column_sortable']")
-    public WebElement table_headers;
+    public List<WebElement> table_headers;
 
 }
