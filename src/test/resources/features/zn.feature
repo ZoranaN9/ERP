@@ -12,3 +12,5 @@ Feature: Login functionality test
       | email                       | pass             | name               |
       | posmanager55@info.com       | posmanager       | POSManager55       |
       | eventscrmmanager55@info.com | eventscrmmanager | EventsCRMManager55 |
+      | posmanager15@info.com       | posmanager       | POSManager15        |
+      | salesmanager55@info.com     | salesmanager     | SalesManager55     |
