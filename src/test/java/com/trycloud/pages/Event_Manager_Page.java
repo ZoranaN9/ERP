@@ -2,6 +2,7 @@ package com.trycloud.pages;
 
 import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,8 +23,15 @@ public class Event_Manager_Page {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginBtn;
 
-    @FindBy(xpath = "//span[normalize-space()='Discuss']")
-    public WebElement DiscussBtn;
+    //@FindBy(xpath = "//span[normalize-space()='Discuss']")
+    //public WebElement DiscussBtn;
+
+    public void clickModules(String modules){
+        String locator = "//span[normalize-space()='"+modules+"']";
+        BrowserUtils.sleep(1);
+        Driver.getDriver().findElement(By.xpath(locator)).click();
+
+    }
 
     public  void login(String EM_UserName, String EM_Password){
 
