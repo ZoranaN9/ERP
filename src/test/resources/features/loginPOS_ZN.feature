@@ -1,4 +1,4 @@
-@zoka
+
 Feature: User valid login
   User Story: As a POS and event CRM manager, I should be able to Login with valid credentials.
 
