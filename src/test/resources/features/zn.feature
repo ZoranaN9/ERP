@@ -1,6 +1,6 @@
 Feature: Login functionality test
 
-
+@mix3
   Scenario Outline: Login with valid credential
     Given the user is on the log in page
    When the user enter email "<email>"
