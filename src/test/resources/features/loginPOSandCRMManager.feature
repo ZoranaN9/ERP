@@ -2,7 +2,7 @@ Feature: User valid login
 
 
   @scenarioOutline
-  Scenario Outline : Verify user information<email>
+  Scenario Outline: Verify user information<email>
     Given the user is on the login page
     When the user enter username "<email>"
     And the user enter password "<password>"
