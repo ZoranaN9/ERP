@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",// path from content root to copy this path
         glue = "com/trycloud/step_definitions",// we use glue in order to define our step_definitions//path from source root
         dryRun = false,// in order to get snippets
-        tags = "@smoke",
+        tags = "@mix3",
         publish = true //generating a report with public link//in order to generate public link for reports
 )
 
