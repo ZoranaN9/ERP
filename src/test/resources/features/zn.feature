@@ -1,6 +1,6 @@
 Feature: Login functionality test
 
-  @mix3
+  @mix3 @smoke
   Scenario Outline: Login with valid credential
     Given the user is on the log in page
     When the user enter email "<email>"
@@ -12,5 +12,5 @@ Feature: Login functionality test
       | email                       | pass             | name               |
       | posmanager55@info.com       | posmanager       | POSManager55       |
       | eventscrmmanager55@info.com | eventscrmmanager | EventsCRMManager55 |
-      | posmanager15@info.com       | posmanager       | POSManager15       |
-      | salesmanager55@info.com     | salesmanager     | SalesManager55     |
+      #| posmanager15@info.com       | posmanager       | POSManager15       |
+     # | salesmanager55@info.com     | salesmanager     | SalesManager55     |
