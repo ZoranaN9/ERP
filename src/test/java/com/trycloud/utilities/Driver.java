@@ -79,9 +79,9 @@ public class Driver {
                 case "chrome":
                     //WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--remote-allow-origins=*");
-                    driverPool.set(new ChromeDriver(options));
+                    //ChromeOptions options = new ChromeOptions();
+                   // options.addArguments("--remote-allow-origins=*");
+                   // driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
