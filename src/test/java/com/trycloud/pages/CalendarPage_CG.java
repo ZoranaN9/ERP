@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CalendarPage {
-    public CalendarPage() {
+public class CalendarPage_CG {
+    public CalendarPage_CG() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -27,8 +27,11 @@ public class CalendarPage {
     @FindBy (xpath = " //tr[contains(@class, 'fc-minor')]")
     public WebElement half_hours;
 
-    @FindBy (xpath = "//tr[@class='fc-minor']") //here I use not for exclude the half hours
-    public List <WebElement> hours;
+    @FindBy (xpath = "//tr[@class='fc-minor']")
+    public List <String> hours;
+
+    @FindBy (xpath = "//span[normalize-space()='0:00']")
+    public WebElement zeroHours;
 
 
 
