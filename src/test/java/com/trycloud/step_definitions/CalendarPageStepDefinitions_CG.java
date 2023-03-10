@@ -6,6 +6,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CalendarPageStepDefinitions_CG {
     CalendarPage_CG calendarPage = new CalendarPage_CG();
@@ -24,32 +29,51 @@ public class CalendarPageStepDefinitions_CG {
     }
 
 
-    @Then("User sees time list increase by one our each time.")
-    public void userSeesTimeListIncreaseByOneOurEachTime() {
-
-    }
-
-
     @Then("User should sees below time list by default")
-    public void userShouldSeesBelowTimeListByDefault(String expectedHours) {
-        String actaulName = calendarPage.zeroHours.getText();
-        Assert.assertEquals(actaulName,expectedHours);
+    public void userShouldSeesBelowTimeListByDefault(List<String> expectedHours) {
+
+
+        ArrayList<WebElement> allTheHours = new ArrayList<WebElement>();
+        allTheHours.add(calendarPage.zeroHours);
+        allTheHours.add(calendarPage.oneHours);
+        allTheHours.add(calendarPage.twoHours);
+        allTheHours.add(calendarPage.threeHours);
+        allTheHours.add(calendarPage.fourHours);
+        allTheHours.add(calendarPage.fiveHours);
+        allTheHours.add(calendarPage.sixHours);
+        allTheHours.add(calendarPage.sevenHours);
+        allTheHours.add(calendarPage.eightHours);
+        allTheHours.add(calendarPage.nineHours);
+        allTheHours.add(calendarPage.tenHours);
+        allTheHours.add(calendarPage.elevenHours);
+        allTheHours.add(calendarPage.twelveHours);
+        allTheHours.add(calendarPage.thirteenHours);
+        allTheHours.add(calendarPage.fourteenHours);
+        allTheHours.add(calendarPage.fifteenHours);
+        allTheHours.add(calendarPage.sixteenHours);
+        allTheHours.add(calendarPage.seventeenHours);
+        allTheHours.add(calendarPage.eigthteenHours);
+        allTheHours.add(calendarPage.nineteenHours);
+        allTheHours.add(calendarPage.twentyHours);
+        allTheHours.add(calendarPage.twentyOneHours);
+        allTheHours.add(calendarPage.twentytwoHours);
+        allTheHours.add(calendarPage.twentythreeHours);
+
+
+        List<String> allTheHoursText = new ArrayList<>();
+
+        for (WebElement each : allTheHours) {
+            allTheHoursText.add(each.getText());
+        }
+
+        System.out.println("actual hours from the web" + allTheHoursText);
+
+        System.out.println("hours from the scenario" + expectedHours);
+        Assert.assertEquals(expectedHours, allTheHoursText);
 
 
 
-
-       // List <String> actualHours = calendarPage.hours;
-
-       // List <String> actualhoursAsString = new ArrayList<>();
-
-      //  for (WebElement each : actualHours) {
-         //   actualhoursAsString.add(each.getText());
-      //  }
-
-        //Assert.assertEquals(actualHours,expectedHours);
+        }
+        }
 
 
-
-    }
-
-}
