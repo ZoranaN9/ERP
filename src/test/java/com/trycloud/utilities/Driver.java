@@ -36,52 +36,18 @@ public class Driver {
             We will read our browserType from configuration.properties file.
             This way, we can control which browser is opened from outside our code.
              */
-            String browserType = "";
-
-            if(System.getProperty("browser")!=null){
-                browserType=System.getProperty("browser");
-            }else {
-                browserType=ConfigurationReader.getProperty("browser");
-            }
-
-            System.out.println("******************************");
-            System.out.println("*******"+browserType+"***********");
-            System.out.println("******************************");
-
-            //String browserType = ConfigurationReader.getProperty("browser");
+            String browserType = ConfigurationReader.getProperty("browser");
 
             /*
             Depending on the browserType returned from the configuration.properties
             switch statement will determine the "case", and open the matching browser.
              */
             switch (browserType){
-                /*
-                case "remote-chrome":
-                    try {
-                        // assign your grid server address
-                        String gridAddress = "54.175.223.153";
-                        URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
-                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-                        desiredCapabilities.setBrowserName("chrome");
-                        driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    break;
-
-                 */
-
-            /*
-            Depending on the browserType returned from the configuration.properties
-            switch statement will determine the "case", and open the matching browser.
-             */
-
                 case "chrome":
                     //WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver());
-                    //ChromeOptions options = new ChromeOptions();
-                   // options.addArguments("--remote-allow-origins=*");
-                   // driverPool.set(new ChromeDriver(options));
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
