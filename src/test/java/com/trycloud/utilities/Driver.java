@@ -55,6 +55,7 @@ public class Driver {
             switch statement will determine the "case", and open the matching browser.
              */
             switch (browserType){
+                /*
                 case "remote-chrome":
                     try {
                         // assign your grid server address
@@ -68,6 +69,8 @@ public class Driver {
                     }
                     break;
 
+                 */
+
             /*
             Depending on the browserType returned from the configuration.properties
             switch statement will determine the "case", and open the matching browser.
@@ -76,6 +79,9 @@ public class Driver {
                 case "chrome":
                     //WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
