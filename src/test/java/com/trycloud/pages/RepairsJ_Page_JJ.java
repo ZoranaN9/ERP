@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RepairsJ_Page {
+public class RepairsJ_Page_JJ {
 
 
-    public RepairsJ_Page() {
+    public RepairsJ_Page_JJ() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

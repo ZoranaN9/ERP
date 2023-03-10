@@ -1,6 +1,6 @@
 package com.trycloud.step_definitions;
 
-import com.trycloud.pages.RepairsJ_Page;
+import com.trycloud.pages.RepairsJ_Page_JJ;
 import com.trycloud.pages.Repairs_Coumns_Page;
 import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.ConfigurationReader;
@@ -10,9 +10,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class RepairsJ_Step_Definitions {
+public class Repairs_Step_Definitions_JJ {
 
-    RepairsJ_Page repairsJPage = new RepairsJ_Page();
+    RepairsJ_Page_JJ repairsJPage = new RepairsJ_Page_JJ();
 
     Repairs_Coumns_Page repairs_coumns_page = new Repairs_Coumns_Page();
 
