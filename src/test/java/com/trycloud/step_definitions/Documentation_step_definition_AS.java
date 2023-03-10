@@ -44,7 +44,8 @@ public class Documentation_step_definition_AS {
 
 
     @Then("User is able to see {int} main documentation topics")
-    public void userIsAbleToSeeMainDocumentationTopics(int arg0) {
+    public void userIsAbleToSeeMainDocumentationTopics(int expectedHeaders) {
+
     }
 
 
