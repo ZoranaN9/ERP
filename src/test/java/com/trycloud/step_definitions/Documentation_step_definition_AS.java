@@ -1,6 +1,7 @@
 package com.trycloud.step_definitions;
 
 import com.trycloud.pages.DocumentationPage_AS;
+import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -25,7 +26,6 @@ public class Documentation_step_definition_AS {
 
   }
 
-
     @When("user holder name should be {string}")
     public void userHolderNameShouldBe(String expectedName ) {
      String actualName = documentationPage_as.dashboard_name.getText();
@@ -37,8 +37,11 @@ public class Documentation_step_definition_AS {
   }
     @When("User is able to click on Documentation button")
     public void userIsAbleToClickOnDocumentationButton() {
+       documentationPage_as.documentation_dropdown.click();
+        BrowserUtils.sleep(2);
+   }
 
-    }
+
 
     @Then("User is able to see {int} main documentation topics")
     public void userIsAbleToSeeMainDocumentationTopics(int arg0) {

@@ -22,5 +22,8 @@ public class DocumentationPage_AS {
 
     @FindBy(xpath = " //span[@class='oe_topbar_name']")
     public WebElement dashboard_name;
+
+    @FindBy(xpath = "//a[.='Documentation']")
+    public  WebElement documentation_dropdown;
 }
 
