@@ -10,3 +10,4 @@ Feature: POS manager access
     And the POS manager enter password "posmanager"
     And the POS manager clicks the log in button
     Then account holder's name should be "POSManager50"
+
