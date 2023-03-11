@@ -66,6 +66,7 @@ public class SalesPageStepDefinitions {
 
         Assert.assertEquals(actualAmountOfHeaders, expectedAmountOfHeaders);
     }
-
-
 }
+
+
+

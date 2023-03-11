@@ -30,6 +30,13 @@ public class CalendarPage_CG {
     @FindBy (xpath = "//tr[@class='fc-minor']")
     public List <String> hours;
 
+    @FindBy (xpath = "(//tr[@data-time])[not(@class='fc-minor')]")
+    public List <WebElement> twentyThreeNew;
+
+    //(//tr[@data-time])[not(@class='fc-minor')]
+
+    //[not(.='fc-minor')]
+
     @FindBy (xpath = "//span[normalize-space()='0:00']")
     public WebElement zeroHours;
 
