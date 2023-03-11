@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",               // this is features folder's path
         glue = "com/trycloud/step_definitions",                    // this is step_definitions folder path
         dryRun = false,                                         // in order to get snippets
-        tags = "",                                          // it will run only tags of our choice
+        tags = "@wip_HA",                                          // it will run only tags of our choice
         publish = true                                          // generating a report with public link
         //monochrome = true,                                      // it turns the color from green to monochrome
 
