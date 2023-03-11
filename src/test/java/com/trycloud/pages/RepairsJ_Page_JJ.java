@@ -5,10 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginCRM_Page_ZN {
-    public LoginCRM_Page_ZN () {
+public class RepairsJ_Page_JJ {
+
+
+    public RepairsJ_Page_JJ() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath =  "//input[@id='login']")
     public WebElement txt_username;
     //input[@id='login']
@@ -20,8 +23,11 @@ public class LoginCRM_Page_ZN {
     @FindBy(xpath = " //button[.='Log in']")
     public WebElement btn_log_in;
 
-    @FindBy(xpath = " //span[@class='oe_topbar_name']")
+    @FindBy(xpath = " //span[normalize-space()='Repairs']")
     public WebElement dashboard_name;
 
-
 }
+
+
+
+
