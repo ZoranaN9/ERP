@@ -1,13 +1,15 @@
 package com.trycloud.step_definitions;
 
+import com.trycloud.utilities.ConfigurationReader;
+import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class POSManagerAccess_HA {
+public class POSManagerAccess_StepDefinitions_HA {
     @Given("POS manager is on the log in page")
     public void pos_manager_is_on_the_log_in_page() {
-
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
     @When("the POS manager enters username {string}")
