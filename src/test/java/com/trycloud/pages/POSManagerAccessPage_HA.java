@@ -28,6 +28,9 @@ public class POSManagerAccessPage_HA {
     public WebElement account_name;
 
 
+    @FindBy(xpath = "(//a[@class='dropdown-toggle'])[1]")
+    public WebElement moreDropdownButton;
+
     @FindBy(xpath = "//a[@href='/web#menu_id=115&action=120']")
     public WebElement discuss_module;
 
@@ -61,10 +64,12 @@ public class POSManagerAccessPage_HA {
     @FindBy(xpath = "//a[@href='/web#menu_id=415&action=']")
     public WebElement manufacturing_module;
 
-    @FindBy(xpath = "//a[@href='/web#menu_id=535&action=723']")
+    //@FindBy(xpath = "//a[@href='/web#menu_id=535&action=723']")
+    @FindBy(xpath = "//a[@data-menu='535']")
     public WebElement repairs_module;
 
-    @FindBy(xpath = "//a[@href='/web#menu_id=333&action=']")
+    //@FindBy(xpath = "//a[@href='/web#menu_id=333&action=']")
+    @FindBy(xpath = "//a[@data-menu='333']")
     public WebElement project_module;
 
     @FindBy(xpath = "//a[@href='/web#menu_id=124&action=']")
