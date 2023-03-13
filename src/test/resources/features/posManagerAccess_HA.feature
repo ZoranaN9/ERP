@@ -1,9 +1,9 @@
-@wip_HA
+@wip_HA @smoke
 Feature: POS manager access
 
   User Story:
   As a POS manager, I should be able to access to the main modules.
-  @wip_HA
+  @wip_HA @smoke
   Scenario: Verify the POS managers can access to 22 modules.
 
     Given the POS manager is on the log in page
